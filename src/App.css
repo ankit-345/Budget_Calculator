@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+:root{
+  --body-grey: grey;
+  --white: #fff;
+  --red: rgb(235, 82, 11);
+  --green: rgb(39, 199, 39);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--body-grey);
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-heading{
+  margin: 20px;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
+  margin-top: 50px;
   align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--body-grey);
+}
+
+/* ----------------------FORM------------------------*/
+
+form{
+  width: 60%;
+  background-color: var(--white);
+  padding: 20px 20px 20px 20px;
+  box-shadow: 4px 4px 23px 3px #ffffff80;
+}
+
+#form-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.form-group{
+  width: 45%;
+}
+
+.form-control{
+  display: block;
+  padding-bottom: 7px;
+}
+
+input[type=text], input[type=number]{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 5px 5px 0px;
+}
+
+input:focus{
+  outline: none;
+}
+
+.submit-container{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.btn-container{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 15px;
+  border-radius: 3px;
+  background-color: var(--red);
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 27px;
+  box-shadow: 0px 4px 13px 1px #00000061;
+}
+
+.btn-container:hover{
+  box-shadow: 0px 4px 13px 1px #00000082;
+}
+
+.btn{
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--white);
+}
+/* ----------------------FORM-END------------------------*/
+
+/* ----------------------ITEM-START------------------------*/
+
+.item{
+  width: 80%;
+  margin: auto;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgray;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.item:hover{
+  width: 83%;
+  box-shadow: 0px 4px 13px 1px #00000082;
+}
+
+.delete_style{
+  color:var(--red);
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.edit_style{
+  color: var(--green);
+  cursor: pointer;
+}
+
+#clear-btn{
+  width: 160px;
+  padding: 11px 6px;
+  margin-bottom: 5px;
+}
+
+#delete-btn{
+  margin-top: 25px;
+}
+/* ----------------------ITEM-END------------------------*/
+/* ----------------------ALERT-BOX-START-------------------------*/
+.alert-box{
+  background: red;
   color: white;
+  width: 80%;
+  height: 56px;
+  margin: 0px auto;
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ----------------------ALERT-BOX-END-------------------------*/
